@@ -1,8 +1,8 @@
-<?php namespace Pafelin\Gearman\Connectors;
+<?php namespace Patieru\Gearman\Connectors;
 
 use \GearmanClient;
 use \GearmanWorker;
-use Pafelin\Gearman\GearmanQueue;
+use Patieru\Gearman\GearmanQueue;
 use Illuminate\Queue\Connectors\ConnectorInterface;
 
 class GearmanConnector implements ConnectorInterface {

@@ -1,8 +1,8 @@
-<?php namespace Pafelin\Gearman;
+<?php namespace Patieru\Gearman;
 
 use Illuminate\Queue\Queue;
 use Illuminate\Contracts\Queue\Queue as QueueInterface;
-use Pafelin\Gearman\Jobs\GearmanJob;
+use Patieru\Gearman\Jobs\GearmanJob;
 use GearmanException;
 use GearmanWorker;
 use GearmanClient;

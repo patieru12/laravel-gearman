@@ -1,7 +1,7 @@
-<?php namespace Pafelin\Gearman;
+<?php namespace Patieru\Gearman;
 
 use Illuminate\Queue\QueueServiceProvider as ServiceProvider;
-use Pafelin\Gearman\Connectors\GearmanConnector;
+use Patieru\Gearman\Connectors\GearmanConnector;
 
 class GearmanServiceProvider extends ServiceProvider 
 {
