@@ -44,7 +44,7 @@ or, if you have multiple gearman servers:
 
 Then in your code you can add code as (this is the native way to add jobs to the queue):
 
-    Queue::push('SomeClass', array('message' => 'The data that should be available in the SomeClass@fire method'));
+    
 
 Small hint, you can call Namespaced classes and everything that is written in the docs of laravel for calling custom methods is valid here, too.
 
