@@ -1,5 +1,5 @@
 {
-    "name": "Patieru/gearman",
+    "name": "patieru/gearman",
     "description": "Gearman provider for queues in laravel 6",
     "license" : "MIT",
     "authors": [
