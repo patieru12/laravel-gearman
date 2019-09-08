@@ -12,7 +12,7 @@ second, in `config/app.php`, you need to comment out the native queue service pr
 
 and to put this instead:
 
-    'Pafelin\Gearman\GearmanServiceProvider',
+    'Patieru\Gearman\GearmanServiceProvider',
 
 Then in your config/queue.php file you can add:
 
