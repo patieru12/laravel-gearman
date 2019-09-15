@@ -10,11 +10,11 @@ first you need to add it to your composer.json
 
 second, in `config/app.php`, you need to comment out the native queue service provider
 
-    //'Illuminate\Queue\QueueServiceProvider',
+    //Illuminate\Queue\QueueServiceProvider::class,
 
 and to put this instead:
 
-    'Patieru\Gearman\GearmanServiceProvider',
+    Patieru\Gearman\GearmanServiceProvider::class,
 
 Then in your config/queue.php file you can add:
 

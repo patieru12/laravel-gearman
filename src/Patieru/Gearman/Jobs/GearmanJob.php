@@ -1,4 +1,4 @@
-<?php namespace Pafelin\Gearman\Jobs;
+<?php namespace Patieru\Gearman\Jobs;
 
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Queue\Job as QueueJobInterface;
