@@ -6,7 +6,7 @@ This package gives you the possibily to add gearman as native queue back-end ser
 
 first you need to add it to your composer.json
 
-    "patieru/gearman": "^1.0"
+    "patieru/gearman": "^1.1"
 
 second, in `config/app.php`, you need to comment out the native queue service provider
 
@@ -19,30 +19,43 @@ and to put this instead:
 Then in your config/queue.php file you can add:
 
     'default' => 'gearman',
-    'connections' => array(
-        'gearman' => array(
+    'connections' => [
+        ................
+        'gearman' => [
             'driver' => 'gearman',
-            'host'   => 'localserver.6min.local',
+            'host'   => 'localhost', //means you gearman server is installed on you local machine
             'queue'  => 'default',
             'port'   => 4730,
             'timeout' => 1000 //milliseconds
-        )
-    )
+        ],
+    ]
 
 or, if you have multiple gearman servers:
 
-    'default' => 'gearman',
-    'connections' => array(
-        'gearman' => array(
+    'connections' => [
+        ...........................
+        'gearman' => [
             'driver' => 'gearman',
-            'hosts'  => array(
-                array('host' => 'localserver.6min.local', 'port' => 4730),
-                array('host' => 'localserver2.6min.local', 'port' => 4730),
-            ),
+            'hosts'  => [
+                ['host' => 'localserver.local', 'port' => 4730],
+                ['host' => 'localserver2.local', 'port' => 4730],
+            ],
             'queue'  => 'default',
             'timeout' => 1000 //milliseconds
-        )
-    )
+        ]
+    ]
+
+Then Remember to change default connection for Queue
+change from 
+
+    QUEUE_CONNECTION=sync
+
+to 
+
+    QUEUE_CONNECTION=gearman
+
+in .env
+
 
 Then in your code you can add code as (this is the native way to add jobs to the queue):
 
