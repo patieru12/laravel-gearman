@@ -1,6 +1,6 @@
 {
     "name": "patieru/gearman",
-    "description": "Gearman provider for queues in laravel 6",
+    "description": "Gearman provider for queues in laravel 5.8 or laravel 6",
     "license" : "MIT",
     "authors": [
         {
@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=7.2.0",
-        "illuminate/support": "6.*"
+        "illuminate/support": ">=5.8"
     },
     "autoload": {
         "psr-0": {
